@@ -2,27 +2,17 @@
         agent any
         stages {
             stage('Compile stage') {
-                steps {
-                    maven(maven : 'Maven_3.5.2'){
-                        bat "mvn clean compile"
-                }
+                 echo 'Compile'
             }
         }
 
-             stage('testing stage') {
-                 steps {
-                    maven(maven : 'Maven_3.5.2'){
-                        bat "mvn test"
-                }
+             stage('Testing stage') {
+                 echo 'Test'
             }
         }
 
-              stage('deployment stage') {
-                  steps {
-                    maven(maven : 'Maven_3.5.2'){
-                        bat "mvn deploy"
-                }
-            }
+              stage('Deployment stage') {
+                echo 'Deploy'
         }
 
       }
