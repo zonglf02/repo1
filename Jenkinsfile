@@ -1,15 +1,24 @@
-    pipeline {
+   pipeline {
         agent any
         stages {
             stage('Compile stage') {
-                 echo 'Compile'
+                steps {
+                        bat "mvn clean compile"
             }
+        }
 
-            stage('Testing stage') {
-                 echo 'Test'
+             stage('testing stage') {
+                 steps {
+                        bat "mvn test"
             }
-            stage('Deployment stage') {
-                echo 'Deploy'
-           }
+        }
+
+              stage('deployment stage') {
+                  steps {
+                        bat "mvn deploy"
+            }
+        }
+
       }
+
     }
