@@ -4,17 +4,12 @@
             stage('Compile stage') {
                  echo 'Compile'
             }
-        }
 
-             stage('Testing stage') {
+            stage('Testing stage') {
                  echo 'Test'
             }
-        }
-
-              stage('Deployment stage') {
+            stage('Deployment stage') {
                 echo 'Deploy'
-        }
-
+           }
       }
-
     }
