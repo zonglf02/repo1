@@ -1,4 +1,3 @@
-    stages {
         stage('Build') {
             steps {
                 echo 'Building..'
@@ -14,4 +13,4 @@
                 echo 'Deploying....'
             }
         }
-    }
+
